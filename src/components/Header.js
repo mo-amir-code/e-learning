@@ -34,7 +34,7 @@ const Header = () => {
         </div>
       </nav>
       <div className="absolute  my-auto top-56 left-0 right-0 mx-auto flex flex-col justify-center items-center">
-        <div className="z-40 flex justify-center items-center max-2xl:text-5xl max-lg:text-3xl max-sm:text-xl my-8 text-white slide-right">
+        <div className="z-40 flex justify-center items-center text-5xl max-lg:text-3xl max-sm:text-xl my-8 text-white slide-right">
           <h1 className="[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] " ><strong>Learn technology with <br /> industry experts</strong></h1>
         </div>
         <Link
