@@ -43,7 +43,7 @@ const Courses = () => {
         </h1>
       </div>
 
-      <div className="grid max-2xl:grid-cols-3 max-[812px]:grid-cols-2 max-sm:grid-cols-1  gap-4 mx-10" >
+      <div className="grid grid-cols-3 max-[812px]:grid-cols-2 max-sm:grid-cols-1  gap-4 mx-10" >
 
         {courses.map((course, index)=><div key={index} className="max-w-2xl mx-auto">
           <div className="bg-white shadow-md border border-orange-600  rounded-lg max-w-sm dark:border-orange-600">

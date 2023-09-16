@@ -7,9 +7,11 @@ import Footer from '../components/Footer'
 const CoursePage = () => {
   return (
     <div>
+      <div className='max-w-7xl mx-auto' >
       <Courses/>
       <Teachers/>
       <StudentReview/>
+      </div>
       <Footer/>
     </div>
   )

@@ -29,7 +29,7 @@ const CoursesAndTraining = () => {
           </h1>
         </div>
         <div className="max-w-7xl">
-          <div className="grid max-2xl:grid-cols-2 max-[900px]:grid-cols-1 gap-4 place-items-center mx-10 ">
+          <div className="grid grid-cols-2 max-[900px]:grid-cols-1 gap-4 place-items-center mx-10 ">
             <div>
               <Link to={"/courses"}>
                 <img
