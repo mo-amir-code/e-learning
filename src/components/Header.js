@@ -142,7 +142,7 @@ const Header = () => {
                             <Menu.Item>
                               {({ active }) => (
                                 <Link
-                                  href="/contact"
+                                  to="/contact"
                                   className={classNames(
                                     active
                                       ? "bg-gray-100 text-gray-900"
