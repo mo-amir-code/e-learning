@@ -5,6 +5,7 @@ import ccna from '../media/ccna.png'
 import ccnp from '../media/ccnp.png'
 import rhca from '../media/rhcsa.png'
 import aws from '../media/aws.png'
+import { Link } from "react-router-dom";
 
 const Courses = () => {
     const courses = [
@@ -51,24 +52,23 @@ const Courses = () => {
 
         {courses.map((course, index)=><div key={index} className="max-w-2xl mx-auto">
           <div className="bg-white h-full shadow-md border border-orange-600  rounded-lg max-w-sm dark:border-orange-600">
-            <a href="#" className="flex justify-center items-center" >
+            <Link to="/syllabus" className="flex justify-center items-center" >
               <img
                 className="rounded-t-lg"
                 src={course.image}
                 alt=""
               />
-            </a>
+            </Link>
             <div className="p-5">
-              <a href="#">
+            <Link to="/syllabus">
                 <h5 className="text-black font-bold text-2xl tracking-tight mb-2">
                     {course.title}
                 </h5>
-              </a>
+              </Link>
               <p className="font-normal text-gray-700 mb-3 dark:text-gray-900">
                 {course.description}
               </p>
-              <a
-                // href="#"
+              <Link to="/syllabus"
                 className="text-white cursor-pointer bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 View details
@@ -84,7 +84,7 @@ const Courses = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>)}

@@ -6,7 +6,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Link } from "react-router-dom";
 import logo from '../media/logo.png'
-
+import menu from '../media/svg/menu.svg'
 
 const Header = () => {
   function classNames(...classes) {
@@ -17,14 +17,14 @@ const Header = () => {
       <div className="backdrop-blur-sm backdrop-brightness-50 backdrop-saturate-200" >
       <nav className="z-20">
         <div className="banner">
-          <div className="navbar">
+          <div className="flex justify-between bg-transparent items-center px-10 py-4 max-sm:px-5">
             <div>
               <img
                 src={logo}
                 className="logo rounded-md shadow-sm"
                 />
             </div>
-            <ul className="max-lg:hidden font-semibold text-white" >
+            <ul className="max-lg:hidden font-semibold text-white flex justify-center items-center" >
               <li>
                 <Link className="" to='/'>Home</Link>
               </li>
@@ -41,8 +41,8 @@ const Header = () => {
             <div className="max-lg:block hidden" >
             <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm">
-        <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 92 92" id="menu"><path d="M78 23.5H14c-3.6 0-6.5-2.9-6.5-6.5s2.9-6.5 6.5-6.5h64c3.6 0 6.5 2.9 6.5 6.5s-2.9 6.5-6.5 6.5zM84.5 46c0-3.6-2.9-6.5-6.5-6.5H14c-3.6 0-6.5 2.9-6.5 6.5s2.9 6.5 6.5 6.5h64c3.6 0 6.5-2.9 6.5-6.5zm0 29c0-3.6-2.9-6.5-6.5-6.5H14c-3.6 0-6.5 2.9-6.5 6.5s2.9 6.5 6.5 6.5h64c3.6 0 6.5-2.9 6.5-6.5z"></path></svg>
+        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-0 text-sm font-semibold text-gray-900 shadow-sm">
+        <svg viewBox="0,0,256,256" width="84px" height="84px"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style={{mixBlendMode: "normal"}}><g transform="scale(3.55556,3.55556)"><path d="M56,48c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0zM56,32c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0zM56,16c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0z"></path></g></g></svg>
         </Menu.Button>
       </div>
 
@@ -87,7 +87,7 @@ const Header = () => {
             <li><Menu.Item>
               {({ active }) => (
                 <Link
-                  href="about"
+                  to="/about"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -100,7 +100,7 @@ const Header = () => {
             <li><Menu.Item>
               {({ active }) => (
                 <Link
-                  href="contact"
+                  href="/contact"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
