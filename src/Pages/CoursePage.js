@@ -11,8 +11,8 @@ const CoursePage = () => {
     <div>
       <div className='max-w-7xl mx-auto' >
       <Nav>
-      <Courses/>
       </Nav>
+      <Courses/>
       <Teachers/>
       <StudentReview/>
       <div className='flex justify-center items-center' >
