@@ -42,12 +42,12 @@ const Courses = () => {
   return (
     <div className="" >
       <div className="py-14 flex justify-center items-center">
-        <h1 className=" text-4xl max-sm:text-2xl max-sm:py-2 text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
+        <h1 className="text-4xl max-sm:text-2xl max-sm:py-2 text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
           Courses
         </h1>
       </div>
 
-      <div className="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1  gap-4 mx-10" >
+      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1  gap-4 mx-10" >
 
         {courses.map((course, index)=><div key={index} className="max-w-2xl mx-auto">
           <div className="bg-white h-full shadow-md border border-orange-600  rounded-lg max-w-sm dark:border-orange-600">
