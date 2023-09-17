@@ -5,6 +5,7 @@ import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Link } from "react-router-dom";
+import logo from '../media/logo.png'
 
 
 const Header = () => {
@@ -19,8 +20,8 @@ const Header = () => {
           <div className="navbar">
             <div>
               <img
-                src="https://images-platform.99static.com//KlBLMX8dQrcq6hZGnxf5HSnG29I=/8x543:525x1060/fit-in/500x500/99designs-contests-attachments/123/123360/attachment_123360235"
-                className="logo shadow-md"
+                src={logo}
+                className="logo rounded-md shadow-sm"
                 />
             </div>
             <ul className="max-lg:hidden" >
