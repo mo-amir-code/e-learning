@@ -1,39 +1,43 @@
 import React from "react";
+import comptia from '../media/comptia network+.png'
+import ccst from '../media/ccst.png'
+import ccna from '../media/ccna.png'
+import ccnp from '../media/ccnp.png'
+import rhca from '../media/rhcsa.png'
+import aws from '../media/aws.png'
 
 const Courses = () => {
     const courses = [
         {
-            title: "Be a full stack web developer",
-            description: "In this course you will learn all about web developer",
+            title: "CompTIA Network+EXAM CODE N10-008",
+            description: "CompTIA Network+ helps take your IT infrastructure to the next level, covering troubleshooting, configuring and managing networks.",
+            image: comptia
         },
         {
-            title: "Be a front  web developer",
-            description: "In this course you will learn all about web developer",
+            title: "CCST (Cisco Certified Support Technician) Cybersecurity",
+            description: "The Cisco Certified Support Technician (CCST) Cybersecurity certification validates a candidate's skills and knowledge of entry-level cybersecurity concepts and topics, including security principles, network security and endpoint security concepts, vulnerability assessment and risk management, and incident handling.",
+            image: ccst
         },
         {
-            title: "Be a backend stack web developer",
-            description: "In this course you will learn all about web developer",
+            title: "CCNA",
+            description: "CCNA covers networking fundamentals, IP services, security fundamentals, automation and programmability. Designed for agility and versatility, CCNA validates that you have the skills required to manage and optimize today's most advanced networks.",
+            image: ccna
         },
         {
-            title: "Be a mern stack web developer",
-            description: "In this course you will learn all about web developer",
+            title: "CCNP 350-401 ENCOR",
+            description: "Manage the biggest networks Configure, troubleshoot, and manage the networks of the largest companies in the world. When you earn your CCNP Enterprise certification, you’re proving that you can scale and maintain enterprise networks to ensure they can continue to meet growing demand.",
+            image: ccnp
         },
         {
-            title: "Be a mean stack web developer",
-            description: "In this course you will learn all about web developer",
+            title: "RHCSA",
+            description: "RHCSA (The performance-based Red Hat Certified System Administrator) (EX200) Give you knowledge in areas of system administration common across a wide range of environments and deployment scenarios. The skills learn in this trainings are the foundation for system administration across all Red Hat® products.",
+            image: rhca
         },
         {
-            title: "Be a modern web developer",
-            description: "In this course you will learn all about web developer",
+            title: "AWS",
+            description: "AWS Role-based certifications that showcase your knowledge and skills on AWS and build your credibility as an AWS Cloud professional. Prior cloud and/or strong on-premises IT experience recommended.",
+            image: aws
         },
-        {
-            title: "Be a web developer",
-            description: "In this course you will learn all about web developer",
-        },
-        {
-            title: "Learn machine learning",
-            description: "In this course you will learn all about web developer",
-        }
     ]
   return (
     <div className="" >
@@ -46,11 +50,11 @@ const Courses = () => {
       <div className="grid grid-cols-3 max-[812px]:grid-cols-2 max-sm:grid-cols-1  gap-4 mx-10" >
 
         {courses.map((course, index)=><div key={index} className="max-w-2xl mx-auto">
-          <div className="bg-white shadow-md border border-orange-600  rounded-lg max-w-sm dark:border-orange-600">
-            <a href="#">
+          <div className="bg-white h-full shadow-md border border-orange-600  rounded-lg max-w-sm dark:border-orange-600">
+            <a href="#" className="flex justify-center items-center" >
               <img
                 className="rounded-t-lg"
-                src="https://flowbite.com/docs/images/blog/image-1.jpg"
+                src={course.image}
                 alt=""
               />
             </a>
@@ -87,9 +91,14 @@ const Courses = () => {
 
       </div>
 
+      <div className="mt-16 mb-6 flex justify-center items-center">
+        <h1 className=" text-4xl text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
+        STUDY MATRIAL AND RECORDED CLASSES
+        </h1>
+      </div>
       <div className='grid grid-cols-2 gap-6 mx-10 my-10  max-[1211px]:grid-cols-1 place-items-center' >
-            <iframe className="rounded-lg  max-sm:w-[30rem] max-[515px]:w-[20rem] max-[515px]:h-[12rem] border border-orange-500 cursor-pointer p-0 shadow-lg w-[36rem] h-[19rem]" src="https://www.youtube.com/embed/videoseries?si=3s9SRsoocOofXXg4&amp;list=PLA3rKuTKDmOlzG5O29h95IRA9YfLmvMNO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe className="rounded-lg border max-sm:w-[30rem] max-[515px]:w-[20rem] max-[515px]:h-[12rem] border-orange-500 cursor-pointer p-0 shadow-lg w-[36rem] h-[19rem]" src="https://www.youtube.com/embed/videoseries?si=3s9SRsoocOofXXg4&amp;list=PLA3rKuTKDmOlzG5O29h95IRA9YfLmvMNO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe className="rounded-lg  max-sm:w-[30rem] max-[515px]:w-[20rem] max-[515px]:h-[12rem] border border-orange-500 cursor-pointer p-0 shadow-lg w-[36rem] h-[19rem]" src="https://www.youtube.com/embed/videoseries?si=d2G1ivfevGgCr-m3&amp;list=PLA3rKuTKDmOkHJn6AL9HGNSnmvpK0mMkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe className="rounded-lg border max-sm:w-[30rem] max-[515px]:w-[20rem] max-[515px]:h-[12rem] border-orange-500 cursor-pointer p-0 shadow-lg w-[36rem] h-[19rem]" src="https://www.youtube.com/embed/videoseries?si=vur6F-mj_wPahjOV&amp;list=PLA3rKuTKDmOlzG5O29h95IRA9YfLmvMNO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
     </div>

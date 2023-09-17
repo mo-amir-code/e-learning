@@ -168,15 +168,24 @@ const Companies = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 3,
-        },
+          slidesToScroll: 1,
+          dots:false
+        }
+      },
+      {
+        breakpoint: 362,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots:false
+        }
       },
     ],
   };
   return (
     <div className="my-16">
-      <div className="py-14">
-        <h1 className=" font-bolc text-4xl text-center bg-orange-500 mx-40 py-3 rounded-3xl shadow-md text-white shadow-black">
+      <div className="py-14 flex justify-center items-center">
+        <h1 className=" text-4xl text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
           Hiring Companies
         </h1>
       </div>

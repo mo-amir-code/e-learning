@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import CoursesAndTraining from '../components/CoursesAndTraining'
 import Teachers from '../components/Teachers'
 import Companies from '../components/Companies'
+import StudentReview from '../components/StudentReview'
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <CoursesAndTraining/>
       <Teachers/>
       <Companies/>
+      <StudentReview/>
       </div>
       <Footer/>
     </div>

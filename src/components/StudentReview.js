@@ -137,7 +137,7 @@ const StudentReview = () => {
     const slickSettings = {
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 400,
         autoplay: true,
         slidesToShow: 1,
       };
