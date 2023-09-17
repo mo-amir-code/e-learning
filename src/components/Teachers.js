@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import teachersAchievements from "../media/teachersAchievements.png";
 import "./css/home.css";
+import { previousArrow, nextArrow } from "./StudentReview";
 
 const Teachers = () => {
   const [width, setWidth] = useState();
@@ -24,6 +25,8 @@ const Teachers = () => {
     autoplay: true,
     slidesToShow: 3,
     centerPadding: "4px",
+    prevArrow: previousArrow(),
+    nextArrow: nextArrow(),
     responsive: [
       {
         breakpoint: 1150,
@@ -49,7 +52,7 @@ const Teachers = () => {
   return (
     <section>
       <div className="py-14 flex justify-center items-center">
-        <h1 className=" text-4xl text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
+        <h1 className=" text-4xl max-sm:text-2xl max-sm:py-2 text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
           Teachers
         </h1>
       </div>

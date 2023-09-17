@@ -42,12 +42,12 @@ const Courses = () => {
   return (
     <div className="" >
       <div className="py-14 flex justify-center items-center">
-        <h1 className=" text-4xl text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
+        <h1 className=" text-4xl max-sm:text-2xl max-sm:py-2 text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
           Courses
         </h1>
       </div>
 
-      <div className="grid grid-cols-3 max-[812px]:grid-cols-2 max-sm:grid-cols-1  gap-4 mx-10" >
+      <div className="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1  gap-4 mx-10" >
 
         {courses.map((course, index)=><div key={index} className="max-w-2xl mx-auto">
           <div className="bg-white h-full shadow-md border border-orange-600  rounded-lg max-w-sm dark:border-orange-600">
@@ -71,7 +71,7 @@ const Courses = () => {
                 // href="#"
                 className="text-white cursor-pointer bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
-                Enroll Now
+                View details
                 <svg
                   className="-mr-1 ml-2 h-4 w-4"
                   fill="currentColor"
@@ -92,14 +92,24 @@ const Courses = () => {
       </div>
 
       <div className="mt-16 mb-6 flex justify-center items-center">
-        <h1 className=" text-4xl text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
-        STUDY MATRIAL AND RECORDED CLASSES
+        <h1 className=" text-4xl max-sm:text-2xl max-sm:py-2 text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
+        Study Material and Recorded Classes
         </h1>
       </div>
-      <div className='grid grid-cols-2 gap-6 mx-10 my-10  max-[1211px]:grid-cols-1 place-items-center' >
-            <iframe className="rounded-lg  max-sm:w-[30rem] max-[515px]:w-[20rem] max-[515px]:h-[12rem] border border-orange-500 cursor-pointer p-0 shadow-lg w-[36rem] h-[19rem]" src="https://www.youtube.com/embed/videoseries?si=d2G1ivfevGgCr-m3&amp;list=PLA3rKuTKDmOkHJn6AL9HGNSnmvpK0mMkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe className="rounded-lg border max-sm:w-[30rem] max-[515px]:w-[20rem] max-[515px]:h-[12rem] border-orange-500 cursor-pointer p-0 shadow-lg w-[36rem] h-[19rem]" src="https://www.youtube.com/embed/videoseries?si=vur6F-mj_wPahjOV&amp;list=PLA3rKuTKDmOlzG5O29h95IRA9YfLmvMNO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
+      <div className="grid grid-cols-2 gap-6 mx-10 my-10 max-md:grid-cols-1 place-items-center">
+            <div className="w-full max-lg:px-30 max-md:px-15 max-sm:px-0" >
+            <iframe
+              className="rounded-lg border border-orange-500 cursor-pointer p-0 shadow-lg w-full aspect-video"
+              src="https://www.youtube.com/embed/videoseries?si=vur6F-mj_wPahjOV&amp;list=PLA3rKuTKDmOlzG5O29h95IRA9YfLmvMNO"
+              ></iframe>
+              </div>
+              <div className="w-full max-lg:px-30 max-md:px-15 max-sm:px-0" >
+            <iframe
+              className="rounded-lg border border-orange-500 cursor-pointer p-0 shadow-lg w-full aspect-video"
+              src="https://www.youtube.com/embed/videoseries?si=d6cF1JPr_0AkvP-y&amp;list=PLA3rKuTKDmOkHJn6AL9HGNSnmvpK0mMkk"
+              ></iframe>
+              </div>
+          </div>
 
     </div>
   );

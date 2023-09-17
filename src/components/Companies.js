@@ -185,7 +185,7 @@ const Companies = () => {
   return (
     <div className="my-16">
       <div className="py-14 flex justify-center items-center">
-        <h1 className=" text-4xl text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
+        <h1 className=" text-4xl max-sm:text-2xl max-sm:py-2 text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
           Hiring Companies
         </h1>
       </div>

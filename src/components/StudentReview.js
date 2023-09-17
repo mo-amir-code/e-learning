@@ -145,7 +145,7 @@ const StudentReview = () => {
   return (
     <div className="my-16">
       <div className="py-14 flex justify-center items-center">
-        <h1 className=" text-4xl text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
+        <h1 className=" text-4xl max-sm:text-2xl max-sm:py-2 text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
           Placed Student Reviews
         </h1>
       </div>
@@ -162,7 +162,7 @@ const StudentReview = () => {
   );
 };
 
-function previousArrow(){
+export function previousArrow(){
     
     return <svg fill="#000000" height="40px" width="40px" version="1.1" id="Layer_1"
     viewBox="0 0 512 512">
@@ -177,7 +177,7 @@ function previousArrow(){
 </svg>
 }
 
-function nextArrow(){
+export function nextArrow(){
     return <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1"
     viewBox="0 0 512 512">
 <g>

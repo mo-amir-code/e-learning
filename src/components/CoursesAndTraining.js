@@ -32,7 +32,7 @@ const CoursesAndTraining = () => {
       {modalACNP({ open, setOpen, cancelButtonRef })}
       <div className="">
         <div className="py-14 flex justify-center items-center">
-          <h1 className=" text-4xl text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
+          <h1 className=" text-4xl max-sm:text-2xl max-sm:py-2 text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
             Our Courses and Training
           </h1>
         </div>
@@ -57,7 +57,7 @@ const CoursesAndTraining = () => {
           </div>
 
           <div className="mt-16 mb-6 flex justify-center items-center">
-            <h1 className=" text-4xl text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
+            <h1 className=" text-4xl max-sm:text-2xl max-sm:py-2 text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
               STUDY MATRIAL AND RECORDED CLASSES
             </h1>
           </div>
