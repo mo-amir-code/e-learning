@@ -22,9 +22,9 @@ span{
     transition: 0.5s;
 }
 .navbar{
-    width: 85%;
+    /* width: 85%; */
     margin: auto;
-    padding: 10px 0;
+    padding: 10px 2.6rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,7 +43,6 @@ span{
 }
 .navbar ul li a {
     text-decoration: none;
-    color: black;
     text-transform: uppercase;
 }
 .navbar ul li::after{

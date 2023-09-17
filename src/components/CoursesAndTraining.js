@@ -37,8 +37,8 @@ const CoursesAndTraining = () => {
           </h1>
         </div>
         <div className="max-w-7xl">
-          <div className="" >
-            <div className="grid grid-cols-2 max-md:grid-cols-1 gap-4 place-items-center mx-10 ">
+          <div className="b" >
+            <div className="grid grid-cols-2 max-md:grid-cols-1 gap-4 place-items-center mx-8 ">
               <Link onClick={() => setOpen(true)}>
                 <img
                   className="rounded-lg border border-orange-500 p-0 shadow-lg cursor-pointer"
@@ -61,23 +61,19 @@ const CoursesAndTraining = () => {
               STUDY MATRIAL AND RECORDED CLASSES
             </h1>
           </div>
-          <div className="grid grid-cols-2 gap-6 mx-10 my-10  max-[1211px]:grid-cols-1 place-items-center">
+          <div className="grid grid-cols-2 gap-6 mx-10 my-10 max-md:grid-cols-1 place-items-center">
+            <div className="w-full max-lg:px-30 max-md:px-15 max-sm:px-0" >
             <iframe
-              className="rounded-lg  max-sm:w-[30rem] max-[515px]:w-[20rem] max-[515px]:h-[12rem] border border-orange-500 max-[337px]:w-[14rem] max-[337]:h-[6rem] cursor-pointer p-0 shadow-lg w-[36rem] h-[19rem]"
+              className="rounded-lg border border-orange-500 cursor-pointer p-0 shadow-lg w-full aspect-video"
               src="https://www.youtube.com/embed/videoseries?si=vur6F-mj_wPahjOV&amp;list=PLA3rKuTKDmOlzG5O29h95IRA9YfLmvMNO"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+              ></iframe>
+              </div>
+              <div className="w-full max-lg:px-30 max-md:px-15 max-sm:px-0" >
             <iframe
-              className="rounded-lg  max-sm:w-[30rem] max-[515px]:w-[20rem] max-[515px]:h-[12rem] border border-orange-500 max-[337px]:w-[14rem] max-[337]:h-[6rem]  cursor-pointer p-0 shadow-lg w-[36rem] h-[19rem]"
+              className="rounded-lg border border-orange-500 cursor-pointer p-0 shadow-lg w-full aspect-video"
               src="https://www.youtube.com/embed/videoseries?si=d6cF1JPr_0AkvP-y&amp;list=PLA3rKuTKDmOkHJn6AL9HGNSnmvpK0mMkk"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+              ></iframe>
+              </div>
           </div>
         </div>
       </div>

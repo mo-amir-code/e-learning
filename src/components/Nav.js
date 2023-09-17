@@ -1,30 +1,23 @@
-import React from "react";
-import "./css/home.css";
-import bannerImg from '../media/banner.jpg'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Link } from "react-router-dom";
 import logo from '../media/logo.png'
 
-
-const Header = () => {
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
+const Nav = () => {
+    function classNames(...classes) {
+        return classes.filter(Boolean).join(' ')
+      }
   return (
-    <div className="relative w-full bg-cover bg-center bg-no-repeat" style={{ background: `url(${bannerImg})` }}>
-      <div className="backdrop-blur-sm backdrop-brightness-50 backdrop-saturate-200" >
-      <nav className="z-20">
-        <div className="banner">
-          <div className="navbar">
+    <nav className="navbar">
             <div>
               <img
                 src={logo}
                 className="logo rounded-md shadow-sm"
                 />
             </div>
-            <ul className="max-lg:hidden font-semibold text-white" >
+            <ul className="max-lg:hidden" >
               <li>
                 <Link className="" to='/'>Home</Link>
               </li>
@@ -118,24 +111,8 @@ const Header = () => {
     </Menu>
             </div>
             
-          </div>
-        </div>
-      </nav>
-      <div className="absolute  my-auto top-56 left-0 right-0 mx-auto flex flex-col justify-center items-center">
-        <div className=" flex justify-center items-center text-5xl max-lg:text-3xl max-sm:text-xl my-8 text-white slide-right">
-          <h1 className="[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] " ><strong>LEARN TECHNOLOGY WITH<br /> INDUSTRY EXPERT</strong></h1>
-        </div>
-        <Link
-          to='/courses'
-          style={{ backgroundColor: "#FF8D0A" }}
-          className="font-bold py-3 px-6 rounded-3xl"
-        >
-          Explore Courses
-        </Link>
-      </div>
-      </div>
-    </div>
-  );
-};
+          </nav>
+  )
+}
 
-export default Header;
+export default Nav

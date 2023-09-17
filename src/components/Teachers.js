@@ -71,7 +71,7 @@ const Teachers = () => {
 	c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S16.4,16,17,16z M12,12c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S11.4,12,12,12z M12,16
 	c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S11.4,16,12,16z M7,12c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S6.4,12,7,12z M7,16
 	c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S6.4,16,7,16z"
-                  fill="#ffc600"
+                  fill="#F97316"
                   class="color000000 svgShape"
                 ></path>
               </svg>
@@ -95,22 +95,22 @@ const Teachers = () => {
               >
                 <g
                   data-name="person reading"
-                  fill="#ffc600"
+                  fill="#F97316"
                   class="color000000 svgShape"
                 >
                   <polygon
                     points="17 29 15 24.333 15 11.632 32 17 51 11 32 4 13 11 13 24.333 11 29 17 29"
-                    fill="#ffc600"
+                    fill="#F97316"
                     class="color000000 svgShape"
                   ></polygon>
                   <path
                     d="M10 54a1 1 0 0 1 .553-.9l.342-.17A1.991 1.991 0 0 0 12 51.146V44H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h5zM44 15.231L32.3 18.953a1 1 0 0 1-.606 0L20 15.231v4.3C22.856 21.7 27.287 23 32 23s9.144-1.3 12-3.467z"
-                    fill="#ffc600"
+                    fill="#F97316"
                     class="color000000 svgShape"
                   ></path>
                   <path
                     d="M10,42h3a1,1,0,0,1,1,1v8.146a3.976,3.976,0,0,1-2,3.464V56a1,1,0,0,1-1,1H10l0,2.984L29,60V35H10Z"
-                    fill="#ffc600"
+                    fill="#F97316"
                     class="color000000 svgShape"
                   ></path>
                   <rect
@@ -118,12 +118,12 @@ const Teachers = () => {
                     height="2"
                     x="6"
                     y="40"
-                    fill="#ffc600"
+                    fill="#F97316"
                     class="color000000 svgShape"
                   ></rect>
                   <path
                     d="M59,44H52v7.146a1.991,1.991,0,0,0,1.1,1.789l.342.17A1,1,0,0,1,54,54v1h5a1,1,0,0,0,1-1V45A1,1,0,0,0,59,44Z"
-                    fill="#ffc600"
+                    fill="#F97316"
                     class="color000000 svgShape"
                   ></path>
                   <rect
@@ -131,12 +131,12 @@ const Teachers = () => {
                     height="25"
                     x="31"
                     y="35"
-                    fill="#ffc600"
+                    fill="#F97316"
                     class="color000000 svgShape"
                   ></rect>
                   <path
                     d="M52 56V54.61a3.976 3.976 0 0 1-2-3.464V43a1 1 0 0 1 1-1h3V35H35V60l19 .014L54 57H53A1 1 0 0 1 52 56zM47 39H40V37h7zM20 21.956V24a11.92 11.92 0 0 0 3.517 8.483c.178.179.374.348.567.517H39.909A11.941 11.941 0 0 0 44 24V21.956A23.183 23.183 0 0 1 32 25 23.183 23.183 0 0 1 20 21.956z"
-                    fill="#ffc600"
+                    fill="#F97316"
                     class="color000000 svgShape"
                   ></path>
                   <rect
@@ -144,7 +144,7 @@ const Teachers = () => {
                     height="2"
                     x="56"
                     y="40"
-                    fill="#ffc600"
+                    fill="#F97316"
                     class="color000000 svgShape"
                   ></rect>
                 </g>
@@ -160,7 +160,7 @@ const Teachers = () => {
         <div className="w-full max-w-sm bg-white rounded-lg">
           <div className="flex flex-col items-center pb-10">
             <div className="w-24 p-0 mt-12 mb-0">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="work"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" fill="#ffc600" class="color000000 svgShape"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="work"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" fill="#F97316" class="color000000 svgShape"></path></svg>
             </div>
             <h5 className="mb-1 text-2xl font-semibold text-black">200+</h5>
             <p className="text-md font-normal text-black">
