@@ -7,6 +7,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 import logo from "../media/logo.png";
 import menu from "../media/svg/menu.svg";
+import Text from './Text'
 
 const Header = () => {
   function classNames(...classes) {
@@ -165,13 +166,8 @@ const Header = () => {
           </div>
         </nav>
         <div className="absolute  my-auto top-[40vh] left-0 right-0 mx-auto flex flex-col justify-center items-center">
-          <div className=" flex justify-center items-center text-5xl max-lg:text-3xl max-sm:text-xl my-8 text-white slide-right">
-            <h1 className="[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] ">
-              <strong>
-                LEARN TECHNOLOGY WITH
-                <br /> INDUSTRY EXPERT
-              </strong>
-            </h1>
+          <div className=" flex justify-center items-center text-5xl max-lg:text-3xl max-sm:text-xl my-8 text-white w-full">
+            <Text/>
           </div>
           <Link
             to="/courses"

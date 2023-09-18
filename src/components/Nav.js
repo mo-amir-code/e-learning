@@ -9,7 +9,7 @@ const Nav = ({ children }) => {
     return classes.filter(Boolean).join(" ");
   }
   return (
-    <header className="p-0 bg-transparent">
+    <header className="p-0 bg-white">
       <div className="z-20 flex flex-col">
         <div className="flex flex-col">
           <div className="flex justify-between items-center w-full px-10 max-sm:px-5 max-sm:py-1 py-4">

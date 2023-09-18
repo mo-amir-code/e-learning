@@ -27,6 +27,7 @@ import nitco from "../media/nitco.png";
 import ntt from "../media/ntt.png";
 import unisys from "../media/unisys.png";
 import pando from "../media/pando.png";
+import {previousArrow, nextArrow} from './StudentReview'
 
 const Companies = () => {
   const companies = [
@@ -142,6 +143,8 @@ const Companies = () => {
     speed: 400,
     autoplay: true,
     slidesToShow: 9,
+    prevArrow: previousArrow(), 
+    nextArrow: nextArrow(),
     responsive: [
       {
         breakpoint: 1170,
@@ -184,13 +187,13 @@ const Companies = () => {
   };
   return (
     <div className="my-16">
-      <div className="py-14 flex justify-center items-center">
-        <h1 className=" text-4xl max-sm:text-2xl max-sm:py-2 text-center w-10/12 bg-orange-500 py-3 rounded-3xl shadow-md text-white shadow-black">
-          Hiring Companies
+      <div className="py-14 flex justify-center items-center bg-white">
+        <h1 className=" text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-black border bg-white">
+          Students Works In
         </h1>
       </div>
 
-      <div className="containerSlide" >
+      <div className="containerSlide bg-white" >
         <div className="mx-10 slick-slider">
           <Slider {...slickSettings}>
             {companies.map((company, index) => {

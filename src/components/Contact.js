@@ -11,62 +11,9 @@ const Contact = () => {
   } = useForm();
   return (
     <>
-      {/* <div className="px-20 max-sm:px-5 grid grid-cols-2 max-lg:grid-cols-1 gap-4 my-6">
-        <div className="border-t bg-white px-8 pt-4 pb-8 border-gray-100 rounded-lg shadow">
-          <h2 className="px-0 py-6 text-3xl font-semibold">Office Address</h2>
-          <dl className="divide-y divide-gray-100">
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-900">
-                Email
-              </dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                <strong>info@insjaipur.com</strong>
-              </dd>
-            </div>
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-900">
-                Mobile No.
-              </dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                +919314887355
-              </dd>
-            </div>
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-900">
-                Colony
-              </dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                65 Kalyan
-              </dd>
-            </div>
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-900">
-                Near
-              </dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                Officers Campus Gate No 19 Khatipura
-              </dd>
-            </div>
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-900">
-                City
-              </dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                Jaipur
-              </dd>
-            </div>
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-900">
-                Postal Code
-              </dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                302021
-              </dd>
-            </div>
-          </dl>
-        </div>
+      <div className="px-10 max-sm:px-5 grid grid-cols-8 max-lg:grid-cols-1 gap-4 my-6">
         <form
-          className="bg-white px-8 pt-4 pb-8 rounded-lg shadow"
+          className="bg-white px-8 pt-4 pb-8 col-span-3 rounded-lg border max-lg:col-span-1"
           onSubmit={handleSubmit((data) => {
             console.log(data);
             reset();
@@ -89,7 +36,6 @@ const Contact = () => {
             />
           </div>
           <div className="mb-6">
-
             <input
               type="email"
               id="email"
@@ -122,7 +68,6 @@ const Contact = () => {
             </select>
           </div>
           <div className="mb-6">
-
             <input
               type="number"
               id="telephone"
@@ -136,7 +81,6 @@ const Contact = () => {
             />
           </div>
           <div className="mb-6">
-
             <input
               type="text"
               id="course"
@@ -150,7 +94,6 @@ const Contact = () => {
             />
           </div>
           <div className="mb-6">
-          
             <textarea
               id="message"
               rows="4"
@@ -165,21 +108,56 @@ const Contact = () => {
             Submit
           </button>
         </form>
-      </div> */}
+        <div className="border relative bg-white px-8 pt-4 pb-8 col-span-5 max-lg:col-span-1 rounded-lg ">
+          <h2 className="px-0 py-6 text-3xl font-semibold">Office Address</h2>
+          <dl className="divide-y divide-gray-100">
+            <div className="px-4 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-3 text-gray-900">
+                Mobile No.
+              </dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                <strong>+919314887355</strong>
+              </dd>
+            </div>
+            <div className="px-4 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-3 text-gray-900">
+                Email
+              </dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                <strong>info@insjaipur.com</strong>
+              </dd>
+            </div>
+            <div className="px-4 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-3 text-gray-900">
+                Address
+              </dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                <strong>
+                  65 Kalyan Colony, Near Officers Campus Gate No 19 Khatipura
+                  Jaipur, 302021
+                </strong>
+              </dd>
+            </div>
+          </dl>
+          <div className=" w-full h-auto my-8 rounded-lg" >
+            <iframe
+            className="rounded-lg"
+              width="100%"
+              height="100%"
+              frameBorder={0}
+              marginHeight={0}
+              marginWidth={0}
+              title="map"
+              scrolling="no"
+              src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=65 Kalyan colony near officers campus gate no 19 khatipura Jaipur 302021&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              style={{}}
+            />
+          </div>
+        </div>
+      </div>
 
-      <section className="text-gray-600 body-font relative">
+      {/* <section className="text-gray-600 body-font relative">
         <div className="absolute inset-0 bg-gray-300">
-          <iframe
-            width="100%"
-            height="100%"
-            frameBorder={0}
-            marginHeight={0}
-            marginWidth={0}
-            title="map"
-            scrolling="no"
-            src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=65 Kalyan colony near officers campus gate no 19 khatipura Jaipur 302021&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            style={{}}
-          />
         </div>
         <form className="container px-5 py-24 mx-auto flex" 
          onSubmit={handleSubmit((data) => {
@@ -206,12 +184,6 @@ const Contact = () => {
             />
           </div>
           <div className="mb-6">
-            {/* <label
-            htmlFor="password"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Your password
-          </label> */}
             <input
               type="email"
               id="email"
@@ -229,12 +201,6 @@ const Contact = () => {
             />
           </div>
           <div className="mb-6">
-            {/* <label
-            htmlFor="repeat-password"
-            className="block mb-2 text-sm font-medium text-gray-900 "
-          >
-            Repeat password
-          </label> */}
             <input
               type="number"
               id="telephone"
@@ -248,12 +214,6 @@ const Contact = () => {
             />
           </div>
           <div className="mb-6">
-            {/* <label
-            htmlFor="email"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Full Name
-          </label> */}
             <input
               type="text"
               id="course"
@@ -267,12 +227,6 @@ const Contact = () => {
             />
           </div>
           <div className="mb-6">
-            {/* <label
-            for="message"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Your message
-          </label> */}
             <textarea
               id="message"
               rows="4"
@@ -288,7 +242,7 @@ const Contact = () => {
           </button>
           </div>
         </form>
-      </section>
+      </section> */}
     </>
   );
 };

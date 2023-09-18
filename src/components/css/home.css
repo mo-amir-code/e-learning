@@ -221,23 +221,24 @@ ul{
 
 .slide-right {
     width: 100%;
-    overflow: hidden;
+    overflow: hidden
     /* margin-left: 400px;
     max-width: 500px */
   }
   
   .slide-right h1 {
-    animation: 3s slide-right;
-    animation-delay: 2s;
+    animation: 4s slide-right;
+    animation-delay: 0.5s;
   }
   
   @keyframes slide-right {
     from {
-      margin-left: -500px;
+      margin-left: -600px;
     }
   
     to {
-      margin-left: 0%;
+      margin-left: 600px;
+      /* opacity: 0; */
     }
   }
 
