@@ -12,8 +12,8 @@ const Nav = ({ children }) => {
     <header className="p-0 bg-transparent">
       <div className="z-20 flex flex-col">
         <div className="flex flex-col">
-          <div className="flex justify-between items-center w-full px-10 max-sm:px-5 py-4">
-            <div>
+          <div className="flex justify-between items-center w-full px-10 max-sm:px-5 max-sm:py-1 py-4">
+            <div className=" max-sm:w-28" >
               <Link to={'/'}>
               <img src={logo} className="logo rounded-md shadow-sm" />
               </Link>
@@ -44,11 +44,10 @@ const Nav = ({ children }) => {
               <div className="max-lg:block hidden">
                 <Menu as="div" className="relative inline-block text-left z-40">
                   <div className="">
-                    <Menu.Button className="inline-flex w-full max-sm:px-1 justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm">
+                    <Menu.Button className="inline-flex w-full max-sm:px-1 max-sm:w-10 justify-center gap-x-1.5 rounded-md px-3 py-1 text-sm font-semibold text-gray-900 shadow-sm">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="65"
-                        height="65"
+                        className="max-sm:w-10 w-16"
                         viewBox="0 0 92 92"
                         id="menu"
                       >
