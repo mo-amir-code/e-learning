@@ -61,6 +61,23 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+            <div className="footer-col">
+              <h4>Contact Us</h4>
+              <ul>
+                <li>
+                  <p>Mobile No - <strong>+919314887355</strong></p>
+                </li>
+                <li>
+                <p>Email - <strong>info@insjaipur.com</strong></p>
+                </li>
+                <li>
+                <p>Address - <strong>65 Kalyan colony near officers campus gate no 19 khatipura Jaipur 302021</strong></p>
+                </li>
+                <li>
+                  <a href="#">Need Support</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>
