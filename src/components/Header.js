@@ -20,8 +20,8 @@ const Header = () => {
       <div className="backdrop-blur-sm backdrop-brightness-50 backdrop-saturate-200">
         <nav className="z-20">
           <div className="banner">
-            <div className="flex justify-between bg-transparent items-center px-10 py-4 max-sm:px-5">
-              <div>
+            <div className="flex justify-between bg-transparent items-center max-sm:px-7 max-sm:py-2 px-10 py-4">
+              <div className="max-sm:w-24" >
                 <img src={logo} className="logo rounded-md shadow-sm" />
               </div>
               <ul className="max-lg:hidden font-semibold text-white flex justify-center items-center">
@@ -49,8 +49,8 @@ const Header = () => {
               <div className="max-lg:block hidden">
                 <Menu as="div" className="relative inline-block text-left">
                   <div>
-                    <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-0 text-sm font-semibold text-gray-900 shadow-sm">
-                      <svg viewBox="0,0,256,256" width="84px" height="84px">
+                    <Menu.Button className="inline-flex justify-center rounded-md p-0 text-sm font-semibold text-gray-900 shadow-sm">
+                      <svg viewBox="0,0,256,256" className="max-sm:w-10 w-20 p-0">
                         <g
                           fill="#ffffff"
                           fill-rule="nonzero"
