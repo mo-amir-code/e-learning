@@ -14,8 +14,8 @@ const Header = () => {
   }
   return (
     <div
-      className="relative w-full bg-cover bg-center bg-no-repeat"
-      style={{ background: `url(${bannerImg})` }}
+      className="relative w-full"
+      style={{ background: `url(${bannerImg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
     >
       <div className="backdrop-blur-sm backdrop-brightness-50 backdrop-saturate-200">
         <nav className="z-20">
