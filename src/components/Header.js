@@ -164,7 +164,7 @@ const Header = () => {
             </div>
           </div>
         </nav>
-        <div className="absolute  my-auto top-56 left-0 right-0 mx-auto flex flex-col justify-center items-center">
+        <div className="absolute  my-auto top-[40vh] left-0 right-0 mx-auto flex flex-col justify-center items-center">
           <div className=" flex justify-center items-center text-5xl max-lg:text-3xl max-sm:text-xl my-8 text-white slide-right">
             <h1 className="[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] ">
               <strong>
