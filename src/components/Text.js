@@ -8,13 +8,13 @@ function Text() {
     // Toggle the visibility of the first text every 3 seconds
     const interval = setInterval(() => {
       setIsFirstTextVisible((prev) => !prev);
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="text-animation-container">
+    <div className="text-animation-container w-full">
       {isFirstTextVisible ? (
         <div className="text-animation">
           <div className="[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] text-center">
