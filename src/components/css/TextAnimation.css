@@ -6,7 +6,7 @@
   
   .text-animation {
     display: inline-block;
-    animation: moveLeftToRight 8s linear infinite;
+    animation: moveLeftToRight 6s linear infinite;
   }
   
   .text {
@@ -15,7 +15,10 @@
   
   @keyframes moveLeftToRight {
     0% {
-      transform: translateX(-50vw);
+      transform: translateX(150vw);
+    }
+    50%{
+      transform: translateX(23vw);
     }
     100% {
       transform: translateX(150vw);
