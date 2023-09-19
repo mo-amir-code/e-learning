@@ -33,11 +33,11 @@ function TeacherModal({ teacher, isOpen, onClose }) {
           </button>
           {/* Teacher info */}
           <img
-            src="https://via.placeholder.com/150"
+            src="https://source.unsplash.com/150x150/?portrait?3"
             alt={teacher.name}
             className="w-32 h-32 mx-auto rounded-full shadow-md border-4 border-white"
           />
-          <h2 className="text-2xl font-semibold mt-4 mx-auto">Surjeet Singh</h2>
+          <h2 className="text-2xl font-semibold mt-4 mx-auto">{teacher.name}</h2>
           <p className="text-gray-600 text-sm text-center">10+ years of experience</p>
         </div>
       </div>

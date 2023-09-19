@@ -8,6 +8,7 @@ import TeacherModal from './TeacherModal'
 const Teachers = () => {
   const [width, setWidth] = useState();
   const [modalOpen, setModalOpen] = useState(false);
+  const [teacherInfo, setTeacherInfo] = useState(null)
   const teachersInfo = [
     {
       name: "Jitendra Jakhar ",
@@ -20,7 +21,8 @@ const Teachers = () => {
     },
   ];
 
-  const openModal = () => {
+  const openModal = (teacher) => {
+    setTeacherInfo(teacher)
     setModalOpen(true);
   };
 
@@ -62,7 +64,7 @@ const Teachers = () => {
   };
   return (
     <section>
-      <TeacherModal teacher={teachersInfo} isOpen={modalOpen} onClose={closeModal} />
+      <TeacherModal teacher={teacherInfo} isOpen={modalOpen} onClose={closeModal} />
       <div className="bg-white" >
         <div className="py-10 mt-6 flex flex-col justify-center items-center">
           <h1 className=" text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-black border bg-white">
@@ -78,7 +80,7 @@ const Teachers = () => {
 
                 <div
                   key={index}
-                  onClick={openModal}
+                  onClick={()=>openModal(teacher)}
                   className="flex py-4 flex-col justify-center max-w-xs p-6 rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100"
                 >
                   <img
