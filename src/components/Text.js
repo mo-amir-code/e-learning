@@ -8,7 +8,7 @@ function Text() {
     // Toggle the visibility of the first text every 3 seconds
     const interval = setInterval(() => {
       setIsFirstTextVisible((prev) => !prev);
-    }, 6000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
