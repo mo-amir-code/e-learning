@@ -1,14 +1,150 @@
 import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { set } from "react-hook-form";
+import { Link, Navigate, json } from "react-router-dom";
 
 const Syllabus = () => {
-  const [nav, setNav] = useState(false)
+  const [list, setList] = useState(null);
+  const [nav, setNav] = useState(false);
+  const syllabus = [
+    {
+      title: "Know your pc -",
+      des: [
+        "Install and configure PC system unit components and peripheral devices.",
+        "Install , configure , and troubleshoot display , multimedia devices , storage devices , and internal system components.",
+        "Explain network infrastructure concepts.",
+        "Implement client virtualization.",
+        " Support and troubleshoot laptops , mobile devices and print devices.",
+      ],
+      subH: null,
+    },
+    {
+      title: "CompTIA Network+",
+      des: [
+        "Networking fundamentals.",
+        "Explain basic networking concepts including network services , physical connections , topologies and architecture , and cloud connectivity.",
+        "Network implimentations.",
+        "Routing technologies , networking devices ,ethernet solutions wireless.",
+        "Network operations.",
+        "Monitor and optimize networks to ensure business continuity.",
+        "Network security concepts and network attacks in order to harden networks troubleshoot common cable , connectivity and software issues related to networking.",
+      ],
+      subH: null,
+    },
+    {
+      title: "MCSA Microsoft Windows Server 2016",
+      des: [
+        "Install Windows Servers in Host and Compute Environments",
+        "Implement Storage Solutions, Hyper-V, Windows Containers & High Availability.",
+        "Maintain and Monitor Server Environments.",
+        "Implement DNS, DHCP and IPAM, Network Connectivity & Remote Access Solutions.",
+        "Implement Core and Distributed Network Solutions.",
+        "Implement an Advanced Network Infrastructure.",
+        "Install, Configure, Manage and Maintain Active Directory Domain Services (AD DS) Create and Manage Group Policy.",
+        "Implement AD CS and Identity Federation and Access Solutions",
+      ],
+      subH: null,
+    },
+    {
+      title: "RedHat Linux",
+      des: [
+        "Handling files, directories, command-line Create simple shell scripts.",
+        "Operate running systems.",
+        "environments, and documentation.",
+        "Configure local storage using partitions and logical volumes.",
+        "Create and configure file systems and file system attributes.",
+        "Deploy, configure, and maintain systems, including software installation, update, & core services.",
+        "Manage users and groups.",
+        "Manage security, including basic firewall and SELinux configuration Perform basic container management.",
+      ],
+      subH: null,
+    },
+    {
+      title: "Cisco CCNA",
+      des: null,
+      subH: {
+        NETWORK_FUNDAMENTALS: [
+          "Network component.",
+          "Network topology architectures , Physical interface and cabling.",
+          "Network topology architectures , Physical interface and cabling.",
+          "IPv4 addressing, subnetting , IPv6 addressing and prefix.",
+          "IPv6 address , Virtualization fundamentals.",
+          "Wireless principles , Switching concepts.",
+        ],
+        NETWORK_ACCESS: [
+          "VLANS & interswitch connectivity L2 discovery protocols (CDP and LLDP).",
+          "EtherChannel , STP & RSTP.",
+          "Wireless Architectures and AP , AP and WLC management , Wireless LAN configuration.",
+        ],
+        IP_CONNECTIVITY: [
+          "Components of routing table , Router forwarding decision , Configure and verify static routing",
+          "Configure and verify single area OSPFV2 , First hop redundancy protocol.",
+          "IP SERVICES.",
+          "NAT/PAT NTP client and server mode , DHCP and DNS role in network , SNMP in network operations.",
+          "Syslog features , DHCP client and relay , Forwarding PHB for QoS , Remote access using SSH.",
+          "TFTP/FTP.",
+        ],
+        SECURITY_FUNDAMENTALS: [
+          "Security concepts , Security program elements , Device access control using local passwords.",
+          "Security password policies elements.",
+          "Remote access and site-to-site VPNs , ACL , Layer 2 security features, AAA Wireless security protocols WLAN using WPA2 PSK.",
+        ],
+        AUTOMATION_AND_PROGRAMMABILITY: [
+          "Automation impact on network mgmt. Traditional vs controller-based networking.",
+          "Controller-based and SD architectures.",
+          "Control plane and data plane , North-bound and south-bound APIs.",
+          "DNA Center enabled device mgmt. Characteristics of REST-based APIs Puppet, Chef, and Ansible capabilities Interpret JSON encoded data.",
+        ],
+      },
+    },
+    {
+      title: "Cisco CCNP",
+      des: null,
+      subH: {
+        ARCHITECTURE: [
+          "Design principles used in an enterprise network Principles of SD-WAN & SDA solution Design principles of a WLAN deployment Concepts of wired and wireless Qo5 On-prem and cloud infrastructure deployments.",
+          "Hardware vs software switching.",
+        ],
+        VIRTUALIZATION: [
+          "Virtualization technologies , data path virtualization technologies , network virtualization concepts.",
+        ],
+        INFRASTRUCTURE: [
+          "Wireless-L1 concepts, AP modes, antennas.",
+          "AP discovery L2 & L3 roaming, TS WLAN L2-Trunking, EtherChannel, RSTP, MST.",
+          "NTP, NAT/PAT, HSRP, VRRP, Multicast , L3-EIGRP, OSPF, BGP.",
+        ],
+        NETWORK_ASSURANCE: [
+          "Debugs, trace route, ping, SNMP, and syslog Syslog for remote logging",
+          "NetFlow and Flexible NetFlow",
+          "SPAN/RSPAN/ERSPAN, IPSLA NETCONF and RESTCONF Cisco DNA Center workflows",
+        ],
+        SECURITY: [
+          "Device access control.",
+          "Infrastructure security features (ACLS, COPP) Wireless security features (EAP, WebAuth, PSK).",
+          "REST API security.",
+          "Network security design Threat defense, Endpoint security, Next-generation firewall.",
+        ],
+        AUTOMATION: [
+          "Basic Python components and scripts.",
+          "Construct valid JSON encoded file.",
+          "High-level principles and benefits of YANG.",
+          "APIs for Cisco DNA Center and vManage.",
+          "Interpret REST API in payload using DNA Center and RESTCONF Construct EEM applet to automate configuration.",
+          "Agent vs. agentless orchestration tools",
+        ],
+      },
+    },
+  ];
+
+  const toReadyLists = (values) => {
+    setList(values);
+  };
+
   return (
     <div>
-      {nav && <Navigate to={'/contact'} />}
+      {nav && <Navigate to={"/contact"} />}
       <section className="bg-white dark:bg-gray-900">
         <div className="py-8 px-12 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-          <div className=" text-gray-500 sm:text-lg dark:text-gray-400">
+          {/* <div className=" text-gray-500 sm:text-lg dark:text-gray-400">
             <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
               1. Know your pc -
             </h2>
@@ -31,7 +167,8 @@ const Syllabus = () => {
               </ul>
               <button
                 type="button"
-                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={()=>setNav(true)}
+                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                onClick={() => setNav(true)}
               >
                 Register Now
               </button>
@@ -66,7 +203,8 @@ const Syllabus = () => {
               </ul>
               <button
                 type="button"
-                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={()=>setNav(true)}
+                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                onClick={() => setNav(true)}
               >
                 Register Now
               </button>
@@ -102,7 +240,8 @@ const Syllabus = () => {
               </ul>
               <button
                 type="button"
-                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={()=>setNav(true)}
+                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                onClick={() => setNav(true)}
               >
                 Register Now
               </button>
@@ -138,197 +277,60 @@ const Syllabus = () => {
               </ul>
               <button
                 type="button"
-                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={()=>setNav(true)}
+                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                onClick={() => setNav(true)}
               >
                 Register Now
               </button>
             </p>
-          </div>
-          <div className="text-gray-500 sm:text-lg dark:text-gray-400">
+          </div> */}
+          {syllabus.map((item, index) => (
+            <div
+              key={index}
+              className="text-gray-500 sm:text-lg dark:text-gray-400"
+            >
+              <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
+                {index + 1}. {item.title}
+              </h2>
+              <p className="mb-4 font-light px-6 max-sm:px-4">
+                <ul>
+                  {item.des === null? (
+                    <>
+                      {item.subH &&
+                        Object.entries(item.subH).map(([key, value], index) => (
+                          <ul key={index}>
+                            <h3 className="my-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">
+                              {key}
+                            </h3>
+                            {JSON.stringify(value)
+                              .replace("[", "")
+                              .replace("]", "")
+                              .split('",')
+                              .map((el, subIndex) => (
+                                <li key={subIndex}>{el.slice(1, -1)}</li>
+                              ))}
+                          </ul>
+                        ))}
+                    </>
+                  ) : (
+                    <ul>
+                      {item.des.map((el, index)=>{return <li key={index} >{el}</li>})}
+                    </ul>
+                  )}
+                </ul>
+                <button
+                  type="button"
+                  className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  onClick={() => setNav(true)}
+                >
+                  Register Now
+                </button>
+              </p>
+            </div>
+          ))}
+          {/* <div className="text-gray-500 sm:text-lg dark:text-gray-400">
             <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
-              5. Cisco CCNA
-            </h2>
-            <p className="mb-4 font-light px-6 max-sm:px-4">
-              <ul>
-                <h3 className="my-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">
-                  NETWORK FUNDAMENTALS{" "}
-                </h3>
-                <li>Network component.</li>
-                <li>
-                  Network topology architectures , Physical interface and
-                  cabling.
-                </li>
-                <li>Identify interface and cable , Compare TCP to UDP.</li>
-                <li>
-                  IPv4 addressing, subnetting , IPv6 addressing and prefix.
-                </li>
-                <li>IPv6 address , Virtualization fundamentals.</li>
-                <li>Wireless principles , Switching concepts.</li>
-                <h3 className="my-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">
-                  NETWORK ACCESS{" "}
-                </h3>
-                <li>
-                  VLANS & interswitch connectivity L2 discovery protocols (CDP
-                  and LLDP).
-                </li>
-                <li>EtherChannel , STP & RSTP.</li>
-                <li>
-                  Wireless Architectures and AP , AP and WLC management ,
-                  Wireless LAN configuration.
-                </li>
-                <h3 className="my-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">
-                  IP CONNECTIVITY
-                </h3>
-                <li>
-                  Components of routing table , Router forwarding decision ,
-                  Configure and verify static routing.
-                </li>
-                <li>
-                  Configure and verify single area OSPFV2 , First hop redundancy
-                  protocol.
-                </li>
-                <li>IP SERVICES.</li>
-                <li>
-                  NAT/PAT NTP client and server mode , DHCP and DNS role in
-                  network , SNMP in network operations.
-                </li>
-                <li>
-                  Syslog features , DHCP client and relay , Forwarding PHB for
-                  QoS , Remote access using SSH.
-                </li>
-                <li>TFTP/FTP.</li>
-                <h3 className="my-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">
-                  SECURITY FUNDAMENTALS{" "}
-                </h3>
-                <li>
-                  Security concepts , Security program elements , Device access
-                  control using local passwords .
-                </li>
-                <li>Security password policies elements.</li>
-                <li>
-                  Remote access and site-to-site VPNs , ACL , Layer 2 security
-                  features, AAA Wireless security protocols WLAN using WPA2 PSK.
-                </li>
-                <h3 className="my-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">
-                  AUTOMATION AND PROGRAMMABILITY
-                </h3>
-                <li>
-                  Automation impact on network mgmt. Traditional vs
-                  controller-based networking.
-                </li>
-                <li>Controller-based and SD architectures.</li>
-                <li>
-                  Control plane and data plane , North-bound and south-bound
-                  APIs.
-                </li>
-                <li>
-                  DNA Center enabled device mgmt. Characteristics of REST-based
-                  APIs Puppet, Chef, and Ansible capabilities Interpret JSON
-                  encoded data.
-                </li>
-              </ul>
-              <button
-                type="button"
-                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={()=>setNav(true)}
-              >
-                Register Now
-              </button>
-            </p>
-          </div>
-          <div className="text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
-              6. Cisco CCNA
-            </h2>
-            <p className="mb-4 font-light px-6 max-sm:px-4">
-              <ul>
-                <h3 className="my-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">
-                  NETWORK FUNDAMENTALS{" "}
-                </h3>
-                <li>Network component.</li>
-                <li>
-                  Network topology architectures , Physical interface and
-                  cabling.
-                </li>
-                <li>Identify interface and cable , Compare TCP to UDP.</li>
-                <li>
-                  IPv4 addressing, subnetting , IPv6 addressing and prefix.
-                </li>
-                <li>IPv6 address , Virtualization fundamentals.</li>
-                <li>Wireless principles , Switching concepts.</li>
-                <h3 className="my-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">
-                  NETWORK ACCESS{" "}
-                </h3>
-                <li>
-                  VLANS & interswitch connectivity L2 discovery protocols (CDP
-                  and LLDP).
-                </li>
-                <li>EtherChannel , STP & RSTP.</li>
-                <li>
-                  Wireless Architectures and AP , AP and WLC management ,
-                  Wireless LAN configuration.
-                </li>
-                <h3 className="my-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">
-                  IP CONNECTIVITY
-                </h3>
-                <li>
-                  Components of routing table , Router forwarding decision ,
-                  Configure and verify static routing.
-                </li>
-                <li>
-                  Configure and verify single area OSPFV2 , First hop redundancy
-                  protocol.
-                </li>
-                <li>IP SERVICES.</li>
-                <li>
-                  NAT/PAT NTP client and server mode , DHCP and DNS role in
-                  network , SNMP in network operations.
-                </li>
-                <li>
-                  Syslog features , DHCP client and relay , Forwarding PHB for
-                  QoS , Remote access using SSH.
-                </li>
-                <li>TFTP/FTP.</li>
-                <h3 className="my-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">
-                  SECURITY FUNDAMENTALS{" "}
-                </h3>
-                <li>
-                  Security concepts , Security program elements , Device access
-                  control using local passwords .
-                </li>
-                <li>Security password policies elements.</li>
-                <li>
-                  Remote access and site-to-site VPNs , ACL , Layer 2 security
-                  features, AAA Wireless security protocols WLAN using WPA2 PSK.
-                </li>
-                <h3 className="my-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">
-                  AUTOMATION AND PROGRAMMABILITY
-                </h3>
-                <li>
-                  Automation impact on network mgmt. Traditional vs
-                  controller-based networking.
-                </li>
-                <li>Controller-based and SD architectures.</li>
-                <li>
-                  Control plane and data plane , North-bound and south-bound
-                  APIs.
-                </li>
-                <li>
-                  DNA Center enabled device mgmt. Characteristics of REST-based
-                  APIs Puppet, Chef, and Ansible capabilities Interpret JSON
-                  encoded data.
-                </li>
-              </ul>
-              <button
-                type="button"
-                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={()=>setNav(true)}
-              >
-                Register Now
-              </button>
-            </p>
-          </div>
-          <div className="text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
-              7. Cisco CCNP
+              6. Cisco CCNP
             </h2>
             <p className="mb-4 font-light px-6 max-sm:px-4">
               <ul>
@@ -400,12 +402,13 @@ const Syllabus = () => {
               </ul>
               <button
                 type="button"
-                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={()=>setNav(true)}
+                className="text-white mt-4  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                onClick={() => setNav(true)}
               >
                 Register Now
               </button>
             </p>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

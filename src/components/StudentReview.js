@@ -48,9 +48,6 @@ const StudentReview = () => {
       link: review4,
     },
     {
-      link: review5,
-    },
-    {
       link: review6,
     },
     {
@@ -72,13 +69,7 @@ const StudentReview = () => {
       link: review12,
     },
     {
-      link: review13,
-    },
-    {
       link: review14,
-    },
-    {
-      link: review15,
     },
     {
       link: review16,
@@ -111,9 +102,6 @@ const StudentReview = () => {
       link: review25,
     },
     {
-      link: review26,
-    },
-    {
       link: review27,
     },
     {
@@ -144,10 +132,11 @@ const StudentReview = () => {
   };
   return (
     <div className="my-16 bg-white">
-      <div className="py-14 flex justify-center items-center">
-        <h1 className=" text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-black border bg-white">
-          Placed Student Reviews
-        </h1>
+      <div className="py-14 flex flex-col justify-center items-center">
+      <h1 className=" text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-black border bg-white">
+            Teachers
+          </h1>
+          <p className="text-base leading-relaxed text-center mt-8 mb-0 max-w-[60vw]" >Here are profile of our students some of them are non-technical background.</p>
       </div>
       <div className="overflow-hidden">
         <div className="mx-8">

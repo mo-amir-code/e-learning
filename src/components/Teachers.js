@@ -3,9 +3,11 @@ import Slider from "react-slick";
 import teachersAchievements from "../media/teachersAchievements.png";
 import "./css/home.css";
 import { previousArrow, nextArrow } from "./StudentReview";
+import TeacherModal from './TeacherModal'
 
 const Teachers = () => {
   const [width, setWidth] = useState();
+  const [modalOpen, setModalOpen] = useState(false);
   const teachersInfo = [
     {
       name: "Jitendra Jakhar ",
@@ -17,6 +19,15 @@ const Teachers = () => {
       name: "Shekha",
     },
   ];
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
 
   const slickSettings = {
     dots: true,
@@ -51,19 +62,23 @@ const Teachers = () => {
   };
   return (
     <section>
+      <TeacherModal teacher={teachersInfo} isOpen={modalOpen} onClose={closeModal} />
       <div className="bg-white" >
-        <div className="py-14 flex justify-center items-center">
+        <div className="py-10 mt-6 flex flex-col justify-center items-center">
           <h1 className=" text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-black border bg-white">
             Teachers
           </h1>
+          <p className="text-base leading-relaxed text-center mt-8 mb-0 max-w-[60vw]" >Get to know about INS’s Experts. Our certified and experienced team behind making your training most sucessful.</p>
         </div>
 
         <div className="containerSlide">
           <div className=" mx-10 pb-6 pt-3 slick-slider">
             <Slider {...slickSettings}>
               {teachersInfo.map((teacher, index) => (
+
                 <div
                   key={index}
+                  onClick={openModal}
                   className="flex py-4 flex-col justify-center max-w-xs p-6 rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100"
                 >
                   <img

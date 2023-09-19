@@ -165,9 +165,12 @@ const Header = () => {
             </div>
           </div>
         </nav>
-        <div className="absolute  my-auto top-[40vh] left-0 right-0 mx-auto flex flex-col justify-center items-center">
+        <div className="absolute  my-auto top-[35vh] left-0 right-0 mx-auto flex flex-col justify-center items-center">
           <div className=" flex justify-center items-center text-5xl max-lg:text-3xl max-sm:text-xl my-8 text-white w-full">
             <Text/>
+          </div>
+          <div className=" flex justify-center items-center my-4 text-white w-full">
+            <p className="text-base leading-relaxed max-w-[60vw]" >Since 1998 with more then 10000+ happy students</p>
           </div>
           <Link
             to="/courses"

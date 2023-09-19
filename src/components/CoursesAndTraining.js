@@ -22,10 +22,11 @@ const CoursesAndTraining = () => {
   return (
     <div>
       <div className="">
-        <div className="py-14 flex justify-center items-center">
+        <div className="py-10 mt-4 flex flex-col justify-center items-center">
           <h1 className=" text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-black border">
             Our Courses and Training
           </h1>
+          <p className="text-base leading-relaxed text-center my-8 max-w-[60vw]" >Our courses are designed accordnig to industry demand, If you are looking for entry-level job in IT feild as a Network engineer is the best place for you.</p>
         </div>
         <div className="max-w-7xl">
           <div className="b">
@@ -47,10 +48,11 @@ const CoursesAndTraining = () => {
             </div>
           </div>
 
-          <div className="mt-16 mb-6 flex justify-center items-center">
+          <div className="my-16 mb-6 flex flex-col justify-center items-center">
             <h1 className=" text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-black border">
               STUDY MATRIAL AND RECORDED CLASSES
             </h1>
+            <p className="text-base leading-relaxed text-center my-8 max-w-[60vw]" >Our courses are designed Get free access of recorded classes and boost your skills.</p>
           </div>
           <div className="grid grid-cols-2 gap-6 mx-10 my-10 max-md:grid-cols-1 place-items-center">
             <div className="w-full max-lg:px-30 max-md:px-15 max-sm:px-0 hover:-translate-y-2 transition-all hover:shadow-md rounded-lg">

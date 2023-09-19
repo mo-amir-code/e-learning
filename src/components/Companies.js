@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import './css/home.css'
+import "./css/home.css";
 import tcs from "../media/tcs.png";
 import infosys from "../media/infosys.png";
 import mahindra from "../media/techmahindra.png";
@@ -27,7 +27,7 @@ import nitco from "../media/nitco.png";
 import ntt from "../media/ntt.png";
 import unisys from "../media/unisys.png";
 import pando from "../media/pando.png";
-import {previousArrow, nextArrow} from './StudentReview'
+import { previousArrow, nextArrow } from "./StudentReview";
 
 const Companies = () => {
   const companies = [
@@ -143,7 +143,7 @@ const Companies = () => {
     speed: 400,
     autoplay: true,
     slidesToShow: 9,
-    prevArrow: previousArrow(), 
+    prevArrow: previousArrow(),
     nextArrow: nextArrow(),
     responsive: [
       {
@@ -172,28 +172,32 @@ const Companies = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          dots:false
-        }
+          dots: false,
+        },
       },
       {
         breakpoint: 362,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots:false
-        }
+          dots: false,
+        },
       },
     ],
   };
   return (
     <div className="my-16">
-      <div className="py-14 flex justify-center items-center bg-white">
+      <div className="py-10 mt-4 flex flex-col justify-center items-center bg-white">
         <h1 className=" text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-black border bg-white">
-          Students Works In
+          OUR STUDENTS WORK AT
         </h1>
+        <p className="text-base leading-relaxed text-center mt-8 mb-0 max-w-[60vw]">
+          Also you can be part of these MNC’s throuugh joining our program and
+          trainings.
+        </p>
       </div>
 
-      <div className="containerSlide bg-white" >
+      <div className="containerSlide bg-white">
         <div className="mx-10 slick-slider">
           <Slider {...slickSettings}>
             {companies.map((company, index) => {
