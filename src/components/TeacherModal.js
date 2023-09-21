@@ -8,9 +8,9 @@ function TeacherModal({ teacher, isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto">
       <div className="modal-overlay absolute inset-0 bg-black opacity-50"></div>
-      <div className="modal-container relative bg-white w-full max-w-md mx-auto rounded-lg shadow-lg z-50">
+      <div className="modal-container relative w-full bg-white max-w-md max-[530px]:max-w-[85vw] mx-auto rounded-lg shadow-lg z-50">
         {/* Content */}
-        <div className="modal-content text-center p-8">
+        <div className="modal-content p-8">
           {/* Close button */}
           <button
             onClick={onClose}
@@ -33,12 +33,16 @@ function TeacherModal({ teacher, isOpen, onClose }) {
           </button>
           {/* Teacher info */}
           <img
-            src="https://source.unsplash.com/150x150/?portrait?3"
+            src={teacher.image}
             alt={teacher.name}
             className="w-32 h-32 mx-auto rounded-full shadow-md border-4 border-white"
           />
-          <h2 className="text-2xl font-semibold mt-4 mx-auto">{teacher.name}</h2>
-          <p className="text-gray-600 text-sm text-center">10+ years of experience</p>
+          <h2 className="text-2xl font-semibold mt-4 text-center">{teacher.name}</h2>
+          <p className="text-gray-600 text-sm">
+            <ul className='flex flex-col justify-start' >  
+              {teacher.exp.map((el, index)=>{return<li key={index} className='text-center' >{el}</li>})}
+            </ul>
+          </p>
         </div>
       </div>
     </div>

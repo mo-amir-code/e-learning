@@ -54,18 +54,18 @@ const Header = () => {
                       <svg viewBox="0,0,256,256" className="max-sm:w-10 w-20 p-0">
                         <g
                           fill="#ffffff"
-                          fill-rule="nonzero"
+                          fillRule="nonzero"
                           stroke="none"
-                          stroke-width="1"
-                          stroke-linecap="butt"
-                          stroke-linejoin="miter"
-                          stroke-miterlimit="10"
-                          stroke-dasharray=""
-                          stroke-dashoffset="0"
-                          font-family="none"
-                          font-weight="none"
-                          font-size="none"
-                          text-anchor="none"
+                          strokeWidth="1"
+                          strokeLinecap="butt"
+                          strokeLinejoin="miter"
+                          strokeMiterlimit="10"
+                          strokeDasharray=""
+                          strokeDashoffset="0"
+                          fontFamily="none"
+                          fontWeight="none"
+                          fontSize="none"
+                          textAnchor="none"
                           style={{ mixBlendMode: "normal" }}
                         >
                           <g transform="scale(3.55556,3.55556)">
@@ -85,7 +85,7 @@ const Header = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute z-10 mt-2 w-[90vw] max-md:w-[85vw] origin-center right-0 mx-auto rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <div className="py-1 z-40">
                         <ul className="flex flex-col" >
                           <li>
@@ -170,7 +170,7 @@ const Header = () => {
             <Text/>
           </div>
           <div className=" flex justify-center items-center my-4 text-white w-full">
-            <p className="text-base leading-relaxed max-w-[60vw]" >Since 1998 with more then 10000+ happy students</p>
+            <p className="text-base leading-relaxed max-w-[60vw] text-center" >Since 1998 with more then 10000+ happy students</p>
           </div>
           <Link
             to="/courses"

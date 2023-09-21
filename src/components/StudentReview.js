@@ -134,7 +134,7 @@ const StudentReview = () => {
     <div className="my-16 bg-white">
       <div className="py-14 flex flex-col justify-center items-center">
       <h1 className=" text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-black border bg-white">
-            Teachers
+            PLACEMENTS
           </h1>
           <p className="text-base leading-relaxed text-center mt-8 mb-0 max-w-[60vw]" >Here are profile of our students some of them are non-technical background.</p>
       </div>

@@ -5,59 +5,88 @@ import ccna from "../media/ccna.png";
 import ccnp from "../media/ccnp.png";
 import rhca from "../media/rhcsa.png";
 import aws from "../media/aws.png";
+import knowYourPc from '../media/knowyourpc.png'
+import mcsa from '../media/mcsa.png'
 import { useState } from "react";
 import SyllabusModal from "./SyllabusModal";
+import {syllabus} from './Syllabus'
 
 const Courses = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [syllabusModal, setSyllabusModal] = useState(null)
 
-  const openModal = () => {
+  const openModal = (course) => {
+    syllabus.forEach(element => {
+      if(element.code === course.code){
+        console.log(element)
+        setSyllabusModal(element)
+      }
+    });
     setModalOpen(true);
   };
 
-  const closeModal = () => {
-    setModalOpen(false);
-  };
   const courses = [
+    {
+      title: "Know your pc -",
+      description:
+        "Install and configure PC system unit components and peripheral devices.",
+      image: knowYourPc,
+      code:1
+    },
+    {
+      title: "MCSA Microsoft Windows Server 2016",
+      description:
+        "Install Windows Servers in Host and Compute Environments.",
+      image: mcsa,
+      code:3
+    },
     {
       title: "CompTIA Network+EXAM CODE N10-008",
       description:
         "CompTIA Network+ helps take your IT infrastructure to the next level, covering troubleshooting, configuring and managing networks.",
       image: comptia,
+      code:2
     },
     {
       title: "CCST (Cisco Certified Support Technician) Cybersecurity",
       description:
         "The Cisco Certified Support Technician (CCST) Cybersecurity certification validates a candidate's skills and knowledge of entry-level cybersecurity concepts and topics, including security principles, network security and endpoint security concepts, vulnerability assessment and risk management, and incident handling.",
       image: ccst,
+      code:7
     },
     {
       title: "CCNA",
       description:
         "CCNA covers networking fundamentals, IP services, security fundamentals, automation and programmability. Designed for agility and versatility, CCNA validates that you have the skills required to manage and optimize today's most advanced networks.",
       image: ccna,
+      code:5
     },
     {
       title: "CCNP 350-401 ENCOR",
       description:
         "Manage the biggest networks Configure, troubleshoot, and manage the networks of the largest companies in the world. When you earn your CCNP Enterprise certification, you’re proving that you can scale and maintain enterprise networks to ensure they can continue to meet growing demand.",
       image: ccnp,
+      code:6
     },
     {
       title: "RHCSA",
       description:
         "RHCSA (The performance-based Red Hat Certified System Administrator) (EX200) Give you knowledge in areas of system administration common across a wide range of environments and deployment scenarios. The skills learn in this trainings are the foundation for system administration across all Red Hat® products.",
       image: rhca,
+      code:4
     },
     {
       title: "AWS",
       description:
         "AWS Role-based certifications that showcase your knowledge and skills on AWS and build your credibility as an AWS Cloud professional. Prior cloud and/or strong on-premises IT experience recommended.",
       image: aws,
+      code:8
     },
   ];
+
   return (
     <>
+    <SyllabusModal open={modalOpen} setOpen={setModalOpen} syllabus={syllabusModal} />
       <div className="bg-white">
         <div className="py-14 flex justify-center items-center">
           <h1 className="text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-black border bg-white">
@@ -70,7 +99,9 @@ const Courses = () => {
             <div
               key={index}
               className="max-w-2xl mx-auto hover:-translate-y-2 transition-all cursor-pointer"
-              onClick={openModal}
+              onClick={()=>{
+                openModal(course)
+              }}
             >
               <div className="bg-white h-full hover:shadow-md  border  rounded-lg max-w-sm">
                 <div className="flex justify-center items-center">

@@ -27,7 +27,7 @@ import nitco from "../media/nitco.png";
 import ntt from "../media/ntt.png";
 import unisys from "../media/unisys.png";
 import pando from "../media/pando.png";
-import { previousArrow, nextArrow } from "./StudentReview";
+import bg2 from "../media/bg2.jpg";
 
 const Companies = () => {
   const companies = [
@@ -186,36 +186,67 @@ const Companies = () => {
     ],
   };
   return (
-    <div className="my-16">
-      <div className="py-10 mt-4 flex flex-col justify-center items-center bg-white">
-        <h1 className=" text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-black border bg-white">
-          OUR STUDENTS WORK AT
-        </h1>
-        <p className="text-base leading-relaxed text-center mt-8 mb-0 max-w-[60vw]">
-          Also you can be part of these MNC’s throuugh joining our program and
-          trainings.
-        </p>
-      </div>
+    <div style={{ background: `url(${bg2})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+      <div className="my-16">
+        <div className="py-10 mt-4 flex flex-col justify-center items-center">
+          <h1 className=" text-4xl font-semibold max-sm:text-2xl max-sm:py-2 text-center w-10/12 py-3 rounded-3xl text-white">
+            OUR STUDENTS WORK AT
+          </h1>
+          <p className="text-base leading-relaxed text-center mt-4 mb-0 max-w-[60vw] text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
+            Also you can be part of these MNC’s throuugh joining our program and
+            trainings.
+          </p>
+        </div>
 
-      <div className="containerSlide bg-white">
-        <div className="mx-10 slick-slider">
-          <Slider {...slickSettings}>
-            {companies.map((company, index) => {
-              return (
-                <div key={index} className="w-28 rounded-full">
-                  <img
-                    className="w-28 h-28 p-0 shadow-lg rounded-full object-cover"
-                    src={company.link}
-                    alt={company.name}
-                  ></img>
-                </div>
-              );
-            })}
-          </Slider>
+        <div className="containerSlide">
+          <div className="mx-10 slick-slider">
+            <Slider {...slickSettings}>
+              {companies.map((company, index) => {
+                return (
+                  <div key={index} className="w-28 h-28 rounded-full">
+                    <img
+                      className="w-28 h-28 p-0 shadow-lg rounded-full mx-auto object-cover"
+                      src={company.link}
+                      alt={company.name}
+                    ></img>
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
         </div>
       </div>
     </div>
   );
 };
+
+export function previousArrow(){
+    
+  return <svg fill="#fff" height="40px" width="40px" version="1.1" id="Layer_1"
+  viewBox="0 0 512 512">
+<g>
+ <g>
+     <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M313.749,347.584
+         c8.341,8.341,8.341,21.824,0,30.165c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251L176.917,271.083
+         c-8.341-8.341-8.341-21.824,0-30.165l106.667-106.667c8.341-8.341,21.824-8.341,30.165,0s8.341,21.824,0,30.165L222.165,256
+         L313.749,347.584z"/>
+ </g>
+</g>
+</svg>
+}
+
+export function nextArrow(){
+  return <svg fill="#fff" height="800px" width="800px" version="1.1" id="Layer_1"
+  viewBox="0 0 512 512">
+<g>
+ <g>
+     <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M335.083,271.083
+         L228.416,377.749c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251c-8.341-8.341-8.341-21.824,0-30.165
+         L289.835,256l-91.584-91.584c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0l106.667,106.667
+         C343.424,249.259,343.424,262.741,335.083,271.083z"/>
+ </g>
+</g>
+</svg>
+}
 
 export default Companies;
