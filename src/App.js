@@ -10,6 +10,7 @@ import { Fragment } from "react";
 function App() {
   return (
     <BrowserRouter>
+    <SocialMedia/>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/courses" element={<CoursePage />} />
